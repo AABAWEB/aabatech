@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFix Solutions | Soporte Técnico Especializado</title>
+    <meta name="description" content="Servicio técnico profesional para computadoras e impresoras. Mantenimiento, reparación y redes.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb', // Azul vibrante
+                        secondary: '#1e293b', // Gris oscuro/azulado
+                        accent: '#3b82f6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos personalizados adicionales */
+        .hero-bg {
+            background-image: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), url('https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .service-card:hover .icon-box {
+            background-color: #2563eb;
+            color: white;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700 antialiased bg-gray-50">
+
+    <!-- Navegación -->
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center gap-2">
+                        <i class="fa-solid fa-microchip text-3xl text-primary"></i>
+                        <span class="font-bold text-2xl text-secondary tracking-tight">TechFix<span class="text-primary">Solutions</span></span>
+                    </a>
+                </div>
+                
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-primary font-medium transition">Inicio</a>
+                    <a href="#servicios" class="text-gray-600 hover:text-primary font-medium transition">Servicios</a>
+                    <a href="#nosotros" class="text-gray-600 hover:text-primary font-medium transition">Nosotros</a>
+                    <a href="#testimonios" class="text-gray-600 hover:text-primary font-medium transition">Testimonios</a>
+                    <a href="#contacto" class="bg-primary text-white px-5 py-2.5 rounded-full font-medium hover:bg-blue-700 transition shadow-lg hover:shadow-blue-500/30">Contactar</a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil (Oculto por defecto) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1 shadow-lg">
+                <a href="#inicio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Inicio</a>
+                <a href="#servicios" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Servicios</a>
+                <a href="#nosotros" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Nosotros</a>
+                <a href="#contacto" class="block px-3 py-3 text-base font-medium text-primary font-bold hover:bg-gray-50 rounded-md">Contactar Ahora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg h-screen min-h-[600px] flex items-center justify-center text-center px-4 relative">
+        <div class="max-w-4xl mx-auto text-white relative z-10 animate-fade-in-up">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-500/30 border border-blue-400 text-blue-200 text-sm font-semibold mb-6 backdrop-blur-sm">
+                Soporte Técnico Profesional
+            </span>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Tu tecnología,<br>siempre funcionando al 100%
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Especialistas en reparación de computadoras, impresoras y redes. 
+                Diagnóstico preciso y soluciones rápidas para tu hogar o empresa.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contacto" class="px-8 py-4 bg-primary text-white rounded-full font-bold text-lg hover:bg-blue-700 transition shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1">
+                    Solicitar Cotización
+                </a>
+                <a href="#servicios" class="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-secondary transition">
+                    Ver Servicios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-primary font-bold tracking-wide uppercase text-sm">Nuestros Servicios</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-secondary sm:text-4xl">
+                    Soluciones Integrales
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Cubrimos todas tus necesidades tecnológicas con personal certificado.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 hover:shadow-xl transition duration-300 border border-gray-100 group cursor-pointer">
+                    <div class="icon-box w-14 h-14 bg-blue-100 text-primary rounded-lg flex items-center justify-center text-2xl mb-6 transition duration-300">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3 group-hover:text-primary transition">Mantenimiento PC</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Limpieza interna profunda, cambio de pasta térmica y optimización para prevenir fallos y mejorar la velocidad.
+                    </p>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 hover:shadow-xl transition duration-300 border border-gray-100 group cursor-pointer">
+                    <div class="icon-box w-14 h-14 bg-blue-100 text-primary rounded-lg flex items-center justify-center text-2xl mb-6 transition duration-300">
+                        <i class="fa-solid fa-laptop-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3 group-hover:text-primary transition">Reparación Hardware</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Reparación de placas madre, cambio de pantallas, teclados, baterías y actualización de componentes (SSD, RAM).
+                    </p>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 hover:shadow-xl transition duration-300 border border-gray-100 group cursor-pointer">
+                    <div class="icon-box w-14 h-14 bg-blue-100 text-primary rounded-lg flex items-center justify-center text-2xl mb-6 transition duration-300">
+                        <i class="fa-brands fa-windows"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3 group-hover:text-primary transition">Software y Formateo</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Instalación de sistemas operativos, antivirus, Office y recuperación de datos perdidos. Eliminación de virus.
+                    </p>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 hover:shadow-xl transition duration-300 border border-gray-100 group cursor-pointer">
+                    <div class="icon-box w-14 h-14 bg-blue-100 text-primary rounded-lg flex items-center justify-center text-2xl mb-6 transition duration-300">
+                        <i class="fa-solid fa-print"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3 group-hover:text-primary transition">Impresoras</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Reparación de atascos, limpieza de cabezales, reseteo de almohadillas y configuración de red para Epson, HP y Canon.
+                    </p>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 hover:shadow-xl transition duration-300 border border-gray-100 group cursor-pointer">
+                    <div class="icon-box w-14 h-14 bg-blue-100 text-primary rounded-lg flex items-center justify-center text-2xl mb-6 transition duration-300">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3 group-hover:text-primary transition">Redes e Internet</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Instalación de cableado estructurado, configuración de routers WiFi, repetidores y redes locales para oficinas.
+                    </p>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 hover:shadow-xl transition duration-300 border border-gray-100 group cursor-pointer">
+                    <div class="icon-box w-14 h-14 bg-blue-100 text-primary rounded-lg flex items-center justify-center text-2xl mb-6 transition duration-300">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary mb-3 group-hover:text-primary transition">Soporte Remoto</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Solución de problemas de software a distancia. Rápido, seguro y sin necesidad de mover tu equipo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="py-20 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="mb-10 lg:mb-0 relative">
+                    <!-- Decorative shapes -->
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-blue-100 rounded-full z-0"></div>
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-gray-100 rounded-full z-0"></div>
+                    <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a783?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Técnico reparando PC" class="relative z-10 rounded-2xl shadow-2xl w-full object-cover h-[500px]">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-extrabold text-secondary sm:text-4xl mb-6">
+                        Más que técnicos, somos tus aliados tecnológicos
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        En **TechFix Solutions**, contamos con más de 10 años de experiencia devolviendo la vida a equipos informáticos. Nacimos con la misión de ofrecer un servicio técnico honesto, transparente y eficiente.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-green-100 text-green-500 mt-1">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <p class="ml-4 text-base text-gray-600"><strong>Misión:</strong> Minimizar el tiempo de inactividad de nuestros clientes con soluciones duraderas.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-green-100 text-green-500 mt-1">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <p class="ml-4 text-base text-gray-600"><strong>Valores:</strong> Honestidad en el diagnóstico, Responsabilidad en los plazos y Calidad en los repuestos.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="p-4 bg-gray-50 rounded-lg">
+                                <span class="block text-3xl font-bold text-primary">5k+</span>
+                                <span class="text-sm text-gray-500">Reparaciones</span>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg">
+                                <span class="block text-3xl font-bold text-primary">98%</span>
+                                <span class="text-sm text-gray-500">Satisfacción</span>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg">
+                                <span class="block text-3xl font-bold text-primary">10+</span>
+                                <span class="text-sm text-gray-500">Años Exp.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="py-20 bg-secondary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold sm:text-4xl">¿Por qué elegir TechFix?</h2>
+                <p class="mt-4 text-gray-400">Nos diferenciamos por la calidad y la atención al detalle.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 border border-gray-700 rounded-xl hover:bg-gray-800 transition">
+                    <i class="fa-solid fa-bolt text-4xl text-yellow-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Rapidez</h3>
+                    <p class="text-gray-400 text-sm">Diagnósticos en 24hs y reparaciones express disponibles.</p>
+                </div>
+                <div class="text-center p-6 border border-gray-700 rounded-xl hover:bg-gray-800 transition">
+                    <i class="fa-solid fa-shield-halved text-4xl text-green-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Garantía Real</h3>
+                    <p class="text-gray-400 text-sm">Hasta 90 días de garantía en todas nuestras reparaciones.</p>
+                </div>
+                <div class="text-center p-6 border border-gray-700 rounded-xl hover:bg-gray-800 transition">
+                    <i class="fa-solid fa-wallet text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Precios Justos</h3>
+                    <p class="text-gray-400 text-sm">Presupuestos claros sin costos ocultos ni sorpresas.</p>
+                </div>
+                <div class="text-center p-6 border border-gray-700 rounded-xl hover:bg-gray-800 transition">
+                    <i class="fa-solid fa-user-shield text-4xl text-purple-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Confidencialidad</h3>
+                    <p class="text-gray-400 text-sm">Tus datos están seguros con nosotros. Privacidad total.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-center text-secondary mb-12">Lo que dicen nuestros clientes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-blue-100 absolute top-4 left-4"></i>
+                    <p class="text-gray-600 italic mb-6 relative z-10">"Mi laptop estaba lentísima y pensaba comprar otra. En TechFix le pusieron un disco sólido y ahora vuela. ¡Me ahorraron mucho dinero!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 font-bold">MR</div>
+                        <div class="ml-3">
+                            <h4 class="font-bold text-secondary">María Rodríguez</h4>
+                            <div class="text-yellow-400 text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonio 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-blue-100 absolute top-4 left-4"></i>
+                    <p class="text-gray-600 italic mb-6 relative z-10">"Excelente servicio con las impresoras de mi oficina. Vinieron, revisaron y solucionaron el problema de red el mismo día."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 font-bold">CP</div>
+                        <div class="ml-3">
+                            <h4 class="font-bold text-secondary">Carlos Pérez</h4>
+                            <span class="text-xs text-gray-500">Gerente Pyme</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonio 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-blue-100 absolute top-4 left-4"></i>
+                    <p class="text-gray-600 italic mb-6 relative z-10">"Armaron mi PC Gamer a medida. Me asesoraron con los componentes y el armado quedó súper prolijo. Recomendados."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 font-bold">JG</div>
+                        <div class="ml-3">
+                            <h4 class="font-bold text-secondary">Juan Gomez</h4>
+                            <div class="text-yellow-400 text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Información -->
+                <div>
+                    <h2 class="text-3xl font-extrabold text-secondary mb-6">Contáctanos</h2>
+                    <p class="text-lg text-gray-600 mb-8">¿Tienes problemas con tu equipo? Escríbenos o visítanos para un diagnóstico gratuito.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-primary text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-bold text-secondary">Dirección</h3>
+                                <p class="text-gray-600">Av. Tecnología 123, Centro, Ciudad</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-primary text-xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-bold text-secondary">Teléfono</h3>
+                                <p class="text-gray-600">+52 555 123 4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-primary text-xl">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-bold text-secondary">WhatsApp</h3>
+                                <p class="text-gray-600">+52 555 987 6543</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-primary text-xl">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-bold text-secondary">Horario</h3>
+                                <p class="text-gray-600">Lun - Vie: 9:00 AM - 7:00 PM <br> Sáb: 9:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Nombre Completo</label>
+                            <input type="text" id="name" required class="mt-1 block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-blue-200 focus:ring-opacity-50 bg-white" placeholder="Tu nombre">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+                            <input type="email" id="email" required class="mt-1 block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-blue-200 focus:ring-opacity-50 bg-white" placeholder="tucorreo@ejemplo.com">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700">Servicio de interés</label>
+                            <select id="service" class="mt-1 block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-blue-200 focus:ring-opacity-50 bg-white">
+                                <option>Mantenimiento PC/Laptop</option>
+                                <option>Reparación Impresora</option>
+                                <option>Instalación Redes</option>
+                                <option>Cotización General</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
+                            <textarea id="message" rows="4" required class="mt-1 block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-blue-200 focus:ring-opacity-50 bg-white" placeholder="Describe tu problema..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-300">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="font-bold text-2xl tracking-tight">TechFix<span class="text-blue-400">Solutions</span></span>
+                    <p class="text-gray-400 text-sm mt-2">Expertos en tecnología a tu servicio.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-facebook text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2023 TechFix Solutions. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition duration-300 z-50 hover:scale-110 flex items-center justify-center">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Scripts Javascript -->
+    <script>
+        // Menú Móvil Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = menu.querySelectorAll('a');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú móvil al hacer click en un enlace
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Efecto Navbar al hacer Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
+                navbar.classList.add('bg-white');
+            }
+        });
+
+        // Manejo simple del formulario
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btnSubmit = this.querySelector('button');
+            const originalText = btnSubmit.innerText;
+            
+            btnSubmit.innerText = 'Enviando...';
+            btnSubmit.classList.add('opacity-75');
+            
+            // Simulación de envío
+            setTimeout(() => {
+                btnSubmit.innerText = '¡Mensaje Enviado!';
+                btnSubmit.classList.remove('bg-primary', 'hover:bg-blue-700');
+                btnSubmit.classList.add('bg-green-500', 'hover:bg-green-600');
+                
+                setTimeout(() => {
+                    this.reset();
+                    btnSubmit.innerText = originalText;
+                    btnSubmit.classList.add('bg-primary', 'hover:bg-blue-700');
+                    btnSubmit.classList.remove('bg-green-500', 'hover:bg-green-600', 'opacity-75');
+                    alert('Gracias por contactarnos. Te responderemos a la brevedad.');
+                }, 2000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
