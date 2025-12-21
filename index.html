@@ -41,11 +41,17 @@
             background-attachment: fixed;
         }
         .banner-verde {
-            background-image: linear-gradient(rgba(10, 25, 47, 0.90), rgba(10, 25, 47, 0.90)), url('https://github.com/AABAWEB/aabatech/blob/main/img/banneri.png?raw=true');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+        /* 1. He bajado la oscuridad de 0.90 a 0.50 para que el verde RESALTE más */
+        background-image: linear-gradient(rgba(10, 25, 47, 0.50), rgba(10, 25, 47, 0.50)), url('https://github.com/AABAWEB/aabatech/blob/main/img/banneri.png?raw=true');
+        
+        /* 2. Ajustes para que se vea bien la placa */
+        background-size: cover;       /* Cubre todo el espacio */
+        background-position: center;  /* Centra la placa */
+        background-repeat: no-repeat; /* No repetir la imagen */
+        
+        /* 3. ¡IMPORTANTE! Quité la línea 'background-attachment: fixed' */
+        /* Al quitarla, la imagen se pega al footer y se ve mucho mejor en espacios pequeños */
+    }
         
         .service-card:hover .icon-box {
             background-color: #2563eb;
@@ -476,6 +482,7 @@
     </script>
 </body>
 </html>
+
 
 
 
