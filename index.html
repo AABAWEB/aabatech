@@ -39,6 +39,11 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+        .banner-verde {
+            background-image: linear-gradient(rgba(10, 25, 47, 0.90), rgba(10, 25, 47, 0.90)), url('https://github.com/AABAWEB/aabatech/blob/main/img/banneri.png?raw=true');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
         
         .service-card:hover .icon-box {
@@ -211,19 +216,19 @@
                         Más que especialista, soy tu aliado tecnológico
                     </h2>
                     <p class="text-justify text-gray-600 mb-6 text-lg leading-relaxed">
-                        Hola, soy <strong>ANGELLO ABEL BARRETO ALBAN</strong>. Sé lo frustrante que es cuando <strong>la tecnología te abandona en el peor momento</strong>. Por eso fundé <strong>AABATECH</strong>: para ofrecerte un servicio honesto y transparente. Mi objetivo no es solo reparar tu equipo, sino devolverte la tranquilidad.                
+                        Hola, soy <strong>ANGELLO ABEL BARRETO ALBAN</strong>. Sé lo frustrante que es cuando <strong>la tecnología te abandona en el peor momento</strong>. Por eso nace<strong>AABATECH</strong>: para ofrecerte un servicio honesto y transparente. Mi objetivo no es solo reparar tu equipo, sino devolverte la tranquilidad.                
                     <div class="space-y-4">
                         <div class="flex items-start">
                             <div class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-green-100 text-green-500 mt-1">
                                 <i class="fa-solid fa-check text-xs"></i>
                             </div>
-                            <p class="ml-4 text-base text-gray-600"><strong>Misión:</strong> Minimizar el tiempo de inactividad de nuestros clientes con soluciones duraderas.</p>
+                            <p class="ml-4 text-base text-gray-600"><strong>Misión:</strong> Brindar una segunda vida a tus equipos con reparaciones justas que cuidan tu economía y el medio ambiente,asegurando que ningún fallo técnico detenga tus proyectos o tu negocio.</p>
                         </div>
                         <div class="flex items-start">
                             <div class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-green-100 text-green-500 mt-1">
                                 <i class="fa-solid fa-check text-xs"></i>
                             </div>
-                            <p class="ml-4 text-base text-gray-600"><strong>Valores:</strong> Honestidad en el diagnóstico, Responsabilidad en los plazos y Calidad en los repuestos.</p>
+                            <p class="ml-4 text-base text-gray-600"><strong>Valores:</strong> Honestidad radical en el diagnóstico, Precios justos sin sorpresas, Confidencialidad absoluta de tus datos y Pasión por servir.</p>
                         </div>
                     </div>
 
@@ -381,18 +386,20 @@
 
                 <!-- Formulario -->
                 <div class="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <form id="contactForm" class="space-y-6">
+                    <form action="https://formsubmit.co/abatechnologyc@gmail.com" method="POST" class="space-y-6">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://aabaweb.github.io/aabatech/">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700">Nombre Completo</label>
-                            <input type="text" id="name" required class="mt-1 block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-blue-200 focus:ring-opacity-50 bg-white" placeholder="Tu nombre">
+                            <input type="text" id="name" name="nombre" required class="mt-1 block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-blue-200 focus:ring-opacity-50 bg-white" placeholder="Tu nombre">
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
-                            <input type="email" id="email" required class="mt-1 block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-blue-200 focus:ring-opacity-50 bg-white" placeholder="tucorreo@ejemplo.com">
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-blue-200 focus:ring-opacity-50 bg-white" placeholder="tucorreo@ejemplo.com">
                         </div>
                         <div>
                             <label for="service" class="block text-sm font-medium text-gray-700">Servicio de interés</label>
-                            <select id="service" class="mt-1 block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-blue-200 focus:ring-opacity-50 bg-white">
+                            <select id="service" name="servicio" class="mt-1 block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-blue-200 focus:ring-opacity-50 bg-white">
                                 <option>Mantenimiento PC/Laptop</option>
                                 <option>Reparación Impresora</option>
                                 <option>Instalación Redes</option>
@@ -401,7 +408,7 @@
                         </div>
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
-                            <textarea id="message" rows="4" required class="mt-1 block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-blue-200 focus:ring-opacity-50 bg-white" placeholder="Describe tu problema..."></textarea>
+                            <textarea id="message" name="mensaje" rows="4" required class="mt-1 block w-full px-4 py-3 rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-blue-200 focus:ring-opacity-50 bg-white" placeholder="Describe tu problema..."></textarea>
                         </div>
                         <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-300">
                             Enviar Mensaje
@@ -413,7 +420,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-secondary text-white py-12 border-t border-gray-700">
+    <footer class="banner-verde text-white py-12 border-t border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
@@ -465,35 +472,10 @@
                 navbar.classList.add('bg-white');
             }
         });
-
-        // Manejo simple del formulario
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btnSubmit = this.querySelector('button');
-            const originalText = btnSubmit.innerText;
-            
-            btnSubmit.innerText = 'Enviando...';
-            btnSubmit.classList.add('opacity-75');
-            
-            // Simulación de envío
-            setTimeout(() => {
-                btnSubmit.innerText = '¡Mensaje Enviado!';
-                btnSubmit.classList.remove('bg-primary', 'hover:bg-blue-700');
-                btnSubmit.classList.add('bg-green-500', 'hover:bg-green-600');
-                
-                setTimeout(() => {
-                    this.reset();
-                    btnSubmit.innerText = originalText;
-                    btnSubmit.classList.add('bg-primary', 'hover:bg-blue-700');
-                    btnSubmit.classList.remove('bg-green-500', 'hover:bg-green-600', 'opacity-75');
-                    alert('Gracias por contactarnos. Te responderemos a la brevedad.');
-                }, 2000);
-            }, 1500);
-        });
     </script>
 </body>
-
 </html>
+
 
 
 
